@@ -50,6 +50,10 @@ class UserController extends Controller
             return response()->json(['error' => 'name field is required'], 400);
         }
 
+        if (!$request->has('email') || empty($request->email)) {
+            return response()->json(['error' => 'email field is required'], 400);
+        }
+
         if (!$request->has('password') || empty($request->password)) {
             return response()->json(['error' => 'password field is required'], 400);
         }
@@ -57,7 +61,7 @@ class UserController extends Controller
         try {
             $user = new User();
             $user->name = $request->name;
-            $user->email = $request->email ?? 'default@example.com';
+            $user->email = $request->email;
             $user->password = bcrypt($request->password); 
             $user->save();
 
