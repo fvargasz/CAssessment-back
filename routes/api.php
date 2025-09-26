@@ -3,11 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FlightController;
+use App\Http\Controllers\AirportController;
 
 Route::prefix('users')->group(function () {
     Route::post('/create', [UserController::class, 'create']);
     Route::post('/login', [UserController::class, 'login']);
     
+});
+
+Route::prefix('airports')->group(function () {
+    Route::post('/all', [AirportController::class, 'getAll']);
 });
 
 Route::middleware('auth:sanctum')->prefix('users')->group(function () {
