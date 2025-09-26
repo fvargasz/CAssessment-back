@@ -4,11 +4,45 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Log;
 use function Pest\Laravel\json;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    public function get()
+    {
+        $users = User::all();
+        return response()->json($users);
+    }
+
+    public function login(Request $request)
+    {
+        if (!$request->has('email') || empty($request->email)) {
+            return response()->json(['error' => 'email field is required'], 400);
+        }
+
+        if (!$request->has('password') || empty($request->password)) {
+            return response()->json(['error' => 'password field is required'], 400);
+        }
+        
+        $user = User::where('email', $request->email)->first();
+        Log::info($user);
+
+        if (!$user || !Hash::check($request->password, $user->password)) {
+            return response()->json(['error' => 'Invalid credentials'], 401);
+        }
+
+        $token = $user->createToken('auth_token')->plainTextToken;
+        
+        return response()->json(([
+            'message' => 'Login successful',
+            'user' => $user->only(['name', 'email', 'id']),
+            'token' => $token,
+        ]));
+    }
+
     public function create(Request $request)
     {
         //
@@ -27,12 +61,12 @@ class UserController extends Controller
             $user->password = bcrypt($request->password); 
             $user->save();
 
+            $token = $user->createToken('auth_token')->plainTextToken;
+
             return response()->json([
                 'message' => 'User created successfully',
-                'user' => [
-                    'name' => $user->name,
-                    'email' => $user->email
-                ]
+                'user' => $user->only(['name', 'email', 'id']),
+                'token' => $token,
             ], 201);
         } catch (\Exception $e) {
             return response()->json([
@@ -40,5 +74,19 @@ class UserController extends Controller
                 'details' => $e->getMessage()
             ], 500);
         }
+    }
+
+    public function logout(Request $request)
+    {
+        $user = $request->user()->currentaccessToken()->delete();
+        return response()->json(['message' => 'Logged out successfully']);
+    }
+
+    public function getActiveUser(Request $request) {
+        return response()->json([
+            'success' => true,
+            'user' => $request->user()->only(['id', 'name', 'email'])
+            
+        ]);
     }
 }
