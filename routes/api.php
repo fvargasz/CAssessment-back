@@ -12,16 +12,16 @@ Route::prefix('users')->group(function () {
     
 });
 
+Route::prefix('flight')->group(function () {
+    Route::post('/flights', [FlightController::class, 'getFlights']);
+});
+
 Route::prefix('airports')->group(function () {
     Route::post('/all', [AirportController::class, 'getAll']);
 });
 
 Route::middleware('auth:sanctum')->prefix('users')->group(function () {
     Route::post('/getActiveUser', [UserController::class, 'getActiveUser']);
-});
-
-Route::middleware('auth:sanctum')->prefix('flight')->group(function () {
-    Route::post('/flights', [FlightController::class, 'getFlights']);
 });
 
 Route::middleware('auth:sanctum')->prefix('trip')->group(function () {
