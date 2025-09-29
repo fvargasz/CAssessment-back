@@ -58,6 +58,10 @@ class UserController extends Controller
             return response()->json(['error' => 'password field is required'], 400);
         }
 
+        if (!filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
+            return response()->json(['error' => 'need a valid email'], 400);
+        }
+
         try {
             $user = new User();
             $user->name = $request->name;
