@@ -129,7 +129,35 @@ If you encounter permission issues, you may need to run:
 php artisan migrate:fresh
 ```
 
-### 6. Start the Development Server
+### 6. Seed the Database
+
+If the project provides seeders (like FlightDataSeeder) to populate tables with initial data, you can run them using Artisan:
+
+#### Run Specific Seeder
+
+```bash
+php artisan db:seed --class=FlightDataSeeder
+```
+
+#### Run All Seeders
+
+If the seeder is already referenced in DatabaseSeeder.php, you can run all seeders at once:
+
+```bash
+php artisan db:seed
+```
+
+#### Fresh Migrate and Seed
+
+To drop all tables, re-run migrations, and seed in one command:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+This will rebuild your database and feed it with the provided seed data (e.g., from flight_data.json).
+
+### 7. Start the Development Server
 
 Launch the Laravel development server:
 
@@ -138,6 +166,10 @@ php artisan serve
 ```
 
 Your application will be accessible at [http://localhost:8000](http://localhost:8000)
+
+---
+
+*Want me to also add **Step 8: Sanctum Setup** to this Markdown guide so it covers authentication too?*
 
 ## Additional Configuration
 
