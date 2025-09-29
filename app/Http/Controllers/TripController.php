@@ -200,7 +200,7 @@ class TripController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'User trips retrieved successfully',
-                'data' => $trips,
+                'trips' => $trips,
                 'count' => $trips->count()
             ]);
 

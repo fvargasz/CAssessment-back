@@ -10,7 +10,6 @@ use Carbon\Carbon;
 
 class FlightController extends Controller
 {
-    // Controller methods will go here
     function getFlights(Request $request) {
 
         if (!$request->has('departure_airport_id') || empty($request->departure_airport_id)) {
@@ -22,7 +21,7 @@ class FlightController extends Controller
         }
 
         if (!$request->has('arrival_airport_id') || empty($request->arrival_airport_id)) {
-                return response()->json(['error' => 'arrival airport field is required for round trip'], 400);
+                return response()->json(['error' => 'arrival airport field is required'], 400);
             }
 
         if (!$request->has('departDate') || empty($request->departDate)) {
@@ -38,11 +37,17 @@ class FlightController extends Controller
             $outboundFlights = Flight::with(['departureAirport', 'arrivalAirport', 'airline'])
             ->where('departure_airport_id', $request->departure_airport_id)
             ->where('arrival_airport_id', $request->arrival_airport_id)
+            ->when($request->airline_id, function ($query, $airlineId) {
+                return $query->where('airline_id', $airlineId);
+            })
             ->get();
 
             $returnFlights = Flight::with(['departureAirport', 'arrivalAirport', 'airline'])
             ->where('departure_airport_id', $request->arrival_airport_id)
             ->where('arrival_airport_id', $request->departure_airport_id)
+            ->when($request->airline_id, function ($query, $airlineId) {
+                return $query->where('airline_id', $airlineId);
+            })
             ->get();
 
             $outboundDate = new DateTime($request->departDate);
@@ -51,7 +56,6 @@ class FlightController extends Controller
             $validTrips = [];
             foreach ($outboundFlights as $outbound) {
                 foreach ($returnFlights as $return) {
-                    // Start adding to the array
                     if ($outboundDate == $returnDate && $return->departure_time->greaterThan($outbound->arrival_time)) {
                         $validTrips[] = [
                             'outbound' => $outbound,
@@ -72,8 +76,12 @@ class FlightController extends Controller
                 'trips' => $validTrips
             ]);
         } else {
+            Log::info('airline_id= ' . $request->airline_id);
             $flights = Flight::with(['departureAirport', 'arrivalAirport', 'airline'])
-            ->where('departure_airport_id', $request->departure_airport_id);
+            ->where('departure_airport_id', $request->departure_airport_id)
+            ->when($request->airline_id, function ($query, $airlineId) {
+                return $query->where('airline_id', $airlineId);
+            });
 
             if ($request->filled('arrival_airport_id')) {
                 $flights->where('arrival_airport_id', $request->arrival_airport_id);

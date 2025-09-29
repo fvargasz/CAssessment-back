@@ -4,6 +4,51 @@
       "id": 1,
       "code": "AC",
       "name": "Air Canada"
+    },
+    {
+      "id": 2,
+      "code": "WS",
+      "name": "WestJet"
+    },
+    {
+      "id": 3,
+      "code": "TS",
+      "name": "Air Transat"
+    },
+    {
+      "id": 4,
+      "code": "PD",
+      "name": "Porter Airlines"
+    },
+    {
+      "id": 5,
+      "code": "F8",
+      "name": "Flair Airlines"
+    },
+    {
+      "id": 6,
+      "code": "AA",
+      "name": "American Airlines"
+    },
+    {
+      "id": 7,
+      "code": "UA",
+      "name": "United Airlines"
+    },
+    {
+      "id": 8,
+      "code": "DL",
+      "name": "Delta Air Lines"
+    },
+    {
+      "id": 9,
+      "code": "BA",
+      "name": "British Airways"
+    },
+    {
+      "id": 10,
+      "code": "AF",
+      "name": "Air France"
     }
   ],
   "airports": [
@@ -30,6 +75,222 @@
       "latitude": 49.194698,
       "longitude": -123.179192,
       "timezone": "America/Vancouver"
+    },
+    {
+      "id": 3,
+      "code": "YYZ",
+      "city_code": "YTO",
+      "name": "Lester B. Pearson International",
+      "city": "Toronto",
+      "country_code": "CA",
+      "region_code": "ON",
+      "latitude": 43.677223,
+      "longitude": -79.630556,
+      "timezone": "America/Toronto"
+    },
+    {
+      "id": 4,
+      "code": "YYC",
+      "city_code": "YYC",
+      "name": "Calgary International",
+      "city": "Calgary",
+      "country_code": "CA",
+      "region_code": "AB",
+      "latitude": 51.113888,
+      "longitude": -114.020278,
+      "timezone": "America/Edmonton"
+    },
+    {
+      "id": 5,
+      "code": "YEG",
+      "city_code": "YEG",
+      "name": "Edmonton International",
+      "city": "Edmonton",
+      "country_code": "CA",
+      "region_code": "AB",
+      "latitude": 53.309723,
+      "longitude": -113.579722,
+      "timezone": "America/Edmonton"
+    },
+    {
+      "id": 6,
+      "code": "YOW",
+      "city_code": "YOW",
+      "name": "Ottawa Macdonald-Cartier International",
+      "city": "Ottawa",
+      "country_code": "CA",
+      "region_code": "ON",
+      "latitude": 45.322222,
+      "longitude": -75.669167,
+      "timezone": "America/Toronto"
+    },
+    {
+      "id": 7,
+      "code": "YHZ",
+      "city_code": "YHZ",
+      "name": "Halifax Stanfield International",
+      "city": "Halifax",
+      "country_code": "CA",
+      "region_code": "NS",
+      "latitude": 44.880833,
+      "longitude": -63.508611,
+      "timezone": "America/Halifax"
+    },
+    {
+      "id": 8,
+      "code": "YWG",
+      "city_code": "YWG",
+      "name": "Winnipeg Richardson International",
+      "city": "Winnipeg",
+      "country_code": "CA",
+      "region_code": "MB",
+      "latitude": 49.909999,
+      "longitude": -97.239166,
+      "timezone": "America/Winnipeg"
+    },
+    {
+      "id": 9,
+      "code": "JFK",
+      "city_code": "NYC",
+      "name": "John F. Kennedy International",
+      "city": "New York",
+      "country_code": "US",
+      "region_code": "NY",
+      "latitude": 40.641766,
+      "longitude": -73.780968,
+      "timezone": "America/New_York"
+    },
+    {
+      "id": 10,
+      "code": "LAX",
+      "city_code": "LAX",
+      "name": "Los Angeles International",
+      "city": "Los Angeles",
+      "country_code": "US",
+      "region_code": "CA",
+      "latitude": 33.943399,
+      "longitude": -118.408075,
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "id": 11,
+      "code": "ORD",
+      "city_code": "CHI",
+      "name": "O'Hare International",
+      "city": "Chicago",
+      "country_code": "US",
+      "region_code": "IL",
+      "latitude": 41.979595,
+      "longitude": -87.904460,
+      "timezone": "America/Chicago"
+    },
+    {
+      "id": 12,
+      "code": "MIA",
+      "city_code": "MIA",
+      "name": "Miami International",
+      "city": "Miami",
+      "country_code": "US",
+      "region_code": "FL",
+      "latitude": 25.795865,
+      "longitude": -80.287046,
+      "timezone": "America/New_York"
+    },
+    {
+      "id": 13,
+      "code": "DFW",
+      "city_code": "DFW",
+      "name": "Dallas/Fort Worth International",
+      "city": "Dallas",
+      "country_code": "US",
+      "region_code": "TX",
+      "latitude": 32.895950,
+      "longitude": -97.037200,
+      "timezone": "America/Chicago"
+    },
+    {
+      "id": 14,
+      "code": "SEA",
+      "city_code": "SEA",
+      "name": "Seattle-Tacoma International",
+      "city": "Seattle",
+      "country_code": "US",
+      "region_code": "WA",
+      "latitude": 47.448980,
+      "longitude": -122.309306,
+      "timezone": "America/Los_Angeles"
+    },
+    {
+      "id": 15,
+      "code": "LHR",
+      "city_code": "LON",
+      "name": "Heathrow",
+      "city": "London",
+      "country_code": "GB",
+      "region_code": "ENG",
+      "latitude": 51.469603,
+      "longitude": -0.461941,
+      "timezone": "Europe/London"
+    },
+    {
+      "id": 16,
+      "code": "CDG",
+      "city_code": "PAR",
+      "name": "Charles de Gaulle",
+      "city": "Paris",
+      "country_code": "FR",
+      "region_code": "IDF",
+      "latitude": 49.009724,
+      "longitude": 2.547778,
+      "timezone": "Europe/Paris"
+    },
+    {
+      "id": 17,
+      "code": "FRA",
+      "city_code": "FRA",
+      "name": "Frankfurt am Main",
+      "city": "Frankfurt",
+      "country_code": "DE",
+      "region_code": "HE",
+      "latitude": 50.033333,
+      "longitude": 8.570556,
+      "timezone": "Europe/Berlin"
+    },
+    {
+      "id": 18,
+      "code": "NRT",
+      "city_code": "TYO",
+      "name": "Narita International",
+      "city": "Tokyo",
+      "country_code": "JP",
+      "region_code": "KT",
+      "latitude": 35.771991,
+      "longitude": 140.392838,
+      "timezone": "Asia/Tokyo"
+    },
+    {
+      "id": 19,
+      "code": "DXB",
+      "city_code": "DXB",
+      "name": "Dubai International",
+      "city": "Dubai",
+      "country_code": "AE",
+      "region_code": "DU",
+      "latitude": 25.252778,
+      "longitude": 55.364444,
+      "timezone": "Asia/Dubai"
+    },
+    {
+      "id": 20,
+      "code": "SYD",
+      "city_code": "SYD",
+      "name": "Kingsford Smith",
+      "city": "Sydney",
+      "country_code": "AU",
+      "region_code": "NSW",
+      "latitude": -33.946111,
+      "longitude": 151.177222,
+      "timezone": "Australia/Sydney"
     }
   ],
   "flights": [
@@ -52,6 +313,386 @@
       "arrival_airport_id": 1,
       "arrival_time": "19:11",
       "price": 220.63
+    },
+    {
+      "id": 3,
+      "airline_id": 1,
+      "number": "111",
+      "departure_airport_id": 1,
+      "departure_time": "06:00",
+      "arrival_airport_id": 3,
+      "arrival_time": "07:30",
+      "price": 189.50
+    },
+    {
+      "id": 4,
+      "airline_id": 1,
+      "number": "112",
+      "departure_airport_id": 3,
+      "departure_time": "08:15",
+      "arrival_airport_id": 1,
+      "arrival_time": "09:45",
+      "price": 195.75
+    },
+    {
+      "id": 5,
+      "airline_id": 1,
+      "number": "201",
+      "departure_airport_id": 3,
+      "departure_time": "09:00",
+      "arrival_airport_id": 2,
+      "arrival_time": "12:30",
+      "price": 425.80
+    },
+    {
+      "id": 6,
+      "airline_id": 1,
+      "number": "202",
+      "departure_airport_id": 2,
+      "departure_time": "14:00",
+      "arrival_airport_id": 3,
+      "arrival_time": "17:30",
+      "price": 398.45
+    },
+    {
+      "id": 7,
+      "airline_id": 1,
+      "number": "501",
+      "departure_airport_id": 3,
+      "departure_time": "10:30",
+      "arrival_airport_id": 4,
+      "arrival_time": "14:45",
+      "price": 356.90
+    },
+    {
+      "id": 8,
+      "airline_id": 1,
+      "number": "502",
+      "departure_airport_id": 4,
+      "departure_time": "16:00",
+      "arrival_airport_id": 3,
+      "arrival_time": "20:15",
+      "price": 342.15
+    },
+    {
+      "id": 9,
+      "airline_id": 1,
+      "number": "401",
+      "departure_airport_id": 1,
+      "departure_time": "12:45",
+      "arrival_airport_id": 6,
+      "arrival_time": "14:15",
+      "price": 156.25
+    },
+    {
+      "id": 10,
+      "airline_id": 1,
+      "number": "402",
+      "departure_airport_id": 6,
+      "departure_time": "16:30",
+      "arrival_airport_id": 1,
+      "arrival_time": "18:00",
+      "price": 148.90
+    },
+    {
+      "id": 11,
+      "airline_id": 2,
+      "number": "601",
+      "departure_airport_id": 4,
+      "departure_time": "07:15",
+      "arrival_airport_id": 2,
+      "arrival_time": "08:45",
+      "price": 198.50
+    },
+    {
+      "id": 12,
+      "airline_id": 2,
+      "number": "602",
+      "departure_airport_id": 2,
+      "departure_time": "10:30",
+      "arrival_airport_id": 4,
+      "arrival_time": "12:00",
+      "price": 205.25
+    },
+    {
+      "id": 13,
+      "airline_id": 2,
+      "number": "701",
+      "departure_airport_id": 3,
+      "departure_time": "13:45",
+      "arrival_airport_id": 7,
+      "arrival_time": "16:30",
+      "price": 289.75
+    },
+    {
+      "id": 14,
+      "airline_id": 2,
+      "number": "702",
+      "departure_airport_id": 7,
+      "departure_time": "18:00",
+      "arrival_airport_id": 3,
+      "arrival_time": "22:15",
+      "price": 275.50
+    },
+    {
+      "id": 15,
+      "airline_id": 2,
+      "number": "801",
+      "departure_airport_id": 5,
+      "departure_time": "09:30",
+      "arrival_airport_id": 8,
+      "arrival_time": "12:45",
+      "price": 234.80
+    },
+    {
+      "id": 16,
+      "airline_id": 3,
+      "number": "901",
+      "departure_airport_id": 1,
+      "departure_time": "22:30",
+      "arrival_airport_id": 15,
+      "arrival_time": "09:45",
+      "price": 649.99
+    },
+    {
+      "id": 17,
+      "airline_id": 3,
+      "number": "902",
+      "departure_airport_id": 15,
+      "departure_time": "11:30",
+      "arrival_airport_id": 1,
+      "arrival_time": "14:15",
+      "price": 599.50
+    },
+    {
+      "id": 18,
+      "airline_id": 3,
+      "number": "903",
+      "departure_airport_id": 3,
+      "departure_time": "21:15",
+      "arrival_airport_id": 16,
+      "arrival_time": "10:30",
+      "price": 567.75
+    },
+    {
+      "id": 19,
+      "airline_id": 3,
+      "number": "904",
+      "departure_airport_id": 16,
+      "departure_time": "12:45",
+      "arrival_airport_id": 3,
+      "arrival_time": "15:20",
+      "price": 612.25
+    },
+    {
+      "id": 20,
+      "airline_id": 4,
+      "number": "101",
+      "departure_airport_id": 3,
+      "departure_time": "07:00",
+      "arrival_airport_id": 6,
+      "arrival_time": "08:15",
+      "price": 125.50
+    },
+    {
+      "id": 21,
+      "airline_id": 4,
+      "number": "102",
+      "departure_airport_id": 6,
+      "departure_time": "09:30",
+      "arrival_airport_id": 3,
+      "arrival_time": "10:45",
+      "price": 129.75
+    },
+    {
+      "id": 22,
+      "airline_id": 4,
+      "number": "103",
+      "departure_airport_id": 3,
+      "departure_time": "15:20",
+      "arrival_airport_id": 1,
+      "arrival_time": "16:45",
+      "price": 145.80
+    },
+    {
+      "id": 23,
+      "airline_id": 4,
+      "number": "104",
+      "departure_airport_id": 1,
+      "departure_time": "18:00",
+      "arrival_airport_id": 3,
+      "arrival_time": "19:25",
+      "price": 142.30
+    },
+    {
+      "id": 24,
+      "airline_id": 5,
+      "number": "201",
+      "departure_airport_id": 4,
+      "departure_time": "06:30",
+      "arrival_airport_id": 3,
+      "arrival_time": "10:45",
+      "price": 89.99
+    },
+    {
+      "id": 25,
+      "airline_id": 5,
+      "number": "202",
+      "departure_airport_id": 3,
+      "departure_time": "12:00",
+      "arrival_airport_id": 4,
+      "arrival_time": "16:15",
+      "price": 95.50
+    },
+    {
+      "id": 26,
+      "airline_id": 5,
+      "number": "301",
+      "departure_airport_id": 5,
+      "departure_time": "14:30",
+      "arrival_airport_id": 2,
+      "arrival_time": "16:00",
+      "price": 78.25
+    },
+    {
+      "id": 27,
+      "airline_id": 5,
+      "number": "302",
+      "departure_airport_id": 2,
+      "departure_time": "17:45",
+      "arrival_airport_id": 5,
+      "arrival_time": "19:15",
+      "price": 82.75
+    },
+    {
+      "id": 28,
+      "airline_id": 6,
+      "number": "1501",
+      "departure_airport_id": 3,
+      "departure_time": "08:00",
+      "arrival_airport_id": 9,
+      "arrival_time": "10:45",
+      "price": 445.50
+    },
+    {
+      "id": 29,
+      "airline_id": 6,
+      "number": "1502",
+      "departure_airport_id": 9,
+      "departure_time": "12:30",
+      "arrival_airport_id": 3,
+      "arrival_time": "17:15",
+      "price": 398.25
+    },
+    {
+      "id": 30,
+      "airline_id": 7,
+      "number": "1601",
+      "departure_airport_id": 2,
+      "departure_time": "11:15",
+      "arrival_airport_id": 14,
+      "arrival_time": "12:45",
+      "price": 287.90
+    },
+    {
+      "id": 31,
+      "airline_id": 7,
+      "number": "1602",
+      "departure_airport_id": 14,
+      "departure_time": "15:30",
+      "arrival_airport_id": 2,
+      "arrival_time": "17:00",
+      "price": 295.50
+    },
+    {
+      "id": 32,
+      "airline_id": 8,
+      "number": "2501",
+      "departure_airport_id": 1,
+      "departure_time": "16:45",
+      "arrival_airport_id": 12,
+      "arrival_time": "21:30",
+      "price": 389.75
+    },
+    {
+      "id": 33,
+      "airline_id": 8,
+      "number": "2502",
+      "departure_airport_id": 12,
+      "departure_time": "07:30",
+      "arrival_airport_id": 1,
+      "arrival_time": "13:45",
+      "price": 415.25
+    },
+    {
+      "id": 34,
+      "airline_id": 9,
+      "number": "3001",
+      "departure_airport_id": 3,
+      "departure_time": "20:30",
+      "arrival_airport_id": 15,
+      "arrival_time": "07:45",
+      "price": 789.50
+    },
+    {
+      "id": 35,
+      "airline_id": 9,
+      "number": "3002",
+      "departure_airport_id": 15,
+      "departure_time": "10:15",
+      "arrival_airport_id": 3,
+      "arrival_time": "13:30",
+      "price": 825.75
+    },
+    {
+      "id": 36,
+      "airline_id": 10,
+      "number": "4001",
+      "departure_airport_id": 1,
+      "departure_time": "23:15",
+      "arrival_airport_id": 16,
+      "arrival_time": "12:30",
+      "price": 675.25
+    },
+    {
+      "id": 37,
+      "airline_id": 10,
+      "number": "4002",
+      "departure_airport_id": 16,
+      "departure_time": "14:00",
+      "arrival_airport_id": 1,
+      "arrival_time": "16:45",
+      "price": 698.90
+    },
+    {
+      "id": 38,
+      "airline_id": 1,
+      "number": "5001",
+      "departure_airport_id": 2,
+      "departure_time": "13:30",
+      "arrival_airport_id": 18,
+      "arrival_time": "15:45",
+      "price": 1245.00
+    },
+    {
+      "id": 39,
+      "airline_id": 1,
+      "number": "5002",
+      "departure_airport_id": 18,
+      "departure_time": "17:30",
+      "arrival_airport_id": 2,
+      "arrival_time": "11:15",
+      "price": 1189.75
+    },
+    {
+      "id": 40,
+      "airline_id": 1,
+      "number": "6001",
+      "departure_airport_id": 3,
+      "departure_time": "22:45",
+      "arrival_airport_id": 20,
+      "arrival_time": "05:30",
+      "price": 1567.50
     }
   ]
 }

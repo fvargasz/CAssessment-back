@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AirlineController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FlightController;
@@ -9,7 +10,6 @@ use App\Http\Controllers\TripController;
 Route::prefix('users')->group(function () {
     Route::post('/create', [UserController::class, 'create']);
     Route::post('/login', [UserController::class, 'login']);
-    
 });
 
 Route::prefix('flight')->group(function () {
@@ -20,8 +20,13 @@ Route::prefix('airports')->group(function () {
     Route::post('/all', [AirportController::class, 'getAll']);
 });
 
+Route::prefix('airlines')->group(function() {
+    Route::post('/all', [AirlineController::class, 'getAll']);
+});
+
 Route::middleware('auth:sanctum')->prefix('users')->group(function () {
     Route::post('/getActiveUser', [UserController::class, 'getActiveUser']);
+    Route::post('/logout', [UserController::class, 'logout']);
 });
 
 Route::middleware('auth:sanctum')->prefix('trip')->group(function () {
